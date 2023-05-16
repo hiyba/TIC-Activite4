@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Projet-Tic</title>
+<meta charset="UTF-8">
+<link  rel="stylesheet" href="style.css">
+   
+<style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+   font-size: 10px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container{
+    min-height: 100vh;
+    width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* hello section  */
+#hello {
+
+    background: linear-gradient(to right,#654ea3,#eaafc8);
+    background-size: cover;
+    background-position: top center;
+  position: relative;
+  z-index: 1;
+
+ 
+}
+#hello .hello{
+  max-width: 1200px;
+ 
+
+}
+#hello::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+#hello h1{
+   display: block;
+   width: fit-content;
+   font-size: 4rem;
+   position: relative;
+   color:transparent;
+   left: 10%;
+   animation: text_reveal .5s ease forwards;
+   animation-delay: 1.5s;
+}
+#hello h1 span{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #d308aa;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+}
+#hello .cta{
+display: inline-block;
+font-weight: 500;
+padding: 1px 30px ;
+color:#d308aa;
+background-color: transparent;
+font-size: 1.2rem;
+text-transform: uppercase;
+letter-spacing: .1rem;
+margin-top: 36px;
+transition: .3s ease background-color;
+}
+@keyframes text_reveal_box{
+ 50%{
+    width: 100%;
+    left: 0;
+ }
+ 100%{
+    width: 0;
+    left:100%;
+ }
+}
+@keyframes text_reveal{
+    100%{
+      color: white;
+    }
+   
+}
+/* section résume */
+#résume{
+}
+#résume .résume{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#résume .section-title{
+   font-size: 4rem;
+   font-weight: 300;
+   color:black;
+   margin-bottom: 10px;
+   text-transform: uppercase;
+   letter-spacing: .2rem;
+   text-align: center;
+}
+.résume-item span{
+    color: #d308aa;
+    font-weight: 600;
+}
+.résume-item ul{
+    font-weight: 600;
+}
+#résume .résume-bottom{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#résume .résume-item{
+    flex-basis: 80%;
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #eee;
+    width: 500px;
+    height: 300px;
+    margin: 10px 5%;
+}
+#résume .résume-item:hover{
+    background-color: rgb(203, 193, 193);
+    cursor: pointer;
+}
+/* about les résumes */
+#project .project{
+   flex-direction: column;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 100px 0;
+
+
+}
+#project .project-header h1{
+    margin-bottom: 50px;
+    
+}
+#project .all-project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#project .project-info span{
+    color: #d308aa;
+}
+#project .project-info h1{
+border: 1px solid #d308aa;
+font-weight: 700;
+}
+#project .section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color:black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+ }
+#project .project-item{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ width: 100%;
+ margin: 20px auto;
+ overflow: hidden;
+ border-radius: 10px;
+ background-color: #f4ecf2;
+}
+#about-us{
+    flex-direction: column;
+    text-align: center
+}
+.section-title {
+   
+    font-size: 4rem;
+    font-weight: 300;
+    color:black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    height: 10vh;
+  
+  
+ }
+ #about-us .section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    height: 100vh;
+
+ }
+ .table{
+    display: table;
+    position: absolute;
+     left: 0;
+     height: 40%;
+     width: 100%;
+     margin-bottom: 10px;
+     font-size: 1rem;
+     justify-content: space-between;
+     
+}
+.table td {
+    border: 1px solid #1c3b4f;
+}
+.table th{
+    color: #d308aa;
+    justify-content: space-between;
+}
+.problem{
+  padding-top: 0%;
+}
+
+
+
+
+</style>
+
+
+
+
+</head> 
+<body>
+    <section id="hello"> 
+    <div class="hello container">
+    <div>         
+    
+    <h1>Hello in our website <span></span></h1>
+       <p class="cta">Bienvenue sur notre site de résumés de module TIC vous accueillir ici et de vous offrir un accés facile à des résumés clairs </p>
+     </div>
+    </div>
+    </section>
+
+
+      <section id="résume">
+         <div class="résume container">
+             <div class="résume-top">
+                 <h1 class="section-title"> le sommaire</h1>
+                   <p>dans se partie vous trouvez les noms des chapitres et les étudient qui réalisé a chaque partie </p>
+             </div>  
+               <div class="problem">
+              <div class="résume-bottom">
+                <!-- la primier chapitre -->
+                  <div class="résume-item">
+                   
+                     
+                     
+                              
+                         <h2>Section 1</h2>
+
+                           <p>résume de chapitre 1 :<span>Introduction </span><br> d'aprés :</p><br>
+                             <ul typr="circle">
+                             <li>Ben Hadj djilali magraouan Meriem</li>
+                             <li>Amellal Nour el houda</li>
+                      </ul>
+                    </div>
+               
+                </div>
+               </div>
+                       <!--  le deuxieme chapitre -->
+                <div class="résume-item">
+                   
+                        <h2>Section 2</h2>
+
+                          <p>résume de chapitre 2 :<span> Les résraux informatique</span><br> d'aprés : </p><br>
+                            <ul typr="circle">
+                            <li> Baaziz Hibatou Allah</li>
+                            <li> Bazine Aicha</li>
+                     </ul>
+                   </div>
+              
+               
+                        <!--  le  3chapitre" -->
+                        <div class="résume-item">
+                           
+                                <h2>Section 3 </h2>
+       
+                                  <p>résume de chapitre 3 :<span>Le modèle OSI </span> <br>d'aprés : </p><br>
+                                    <ul typr="circle">
+                                    <li>Mammeri  Nour Djihane</li>
+                                    <li> Refsi Meriem</li>
+                                    </ul>
+                           </div>
+                      
+                       
+                       <div class="résume-item">
+                        
+                            <h2>Section 4</h2>
+   
+                              <p>résume de chapitre 4 :<span>L'internet et le Web </span> <br>d'aprés  :</p><br>
+                                <ul typr="circle">
+                                <li> Kadik Ikram</li>
+                                <li> Zellagui Safa</li>
+                         </ul>
+                       </div>
+                   
+   
+   
+                   <div class="résume-item">
+                   
+                        <h2>Section 5</h2>
+
+                          <p>résume de chapitre 5 :<span>Système de Gestion de version </span><br> d'aprés : </p><br>
+                            <ul typr="circle">
+                            <li> Allouche Aicha</li>
+                            <li> Benkhaled Sabrina</li>
+                     </ul>
+                   </div>
+     
+            </div>
+      </section>
+
+                                 <!-- section about les résumes -->
+                                
+                                
+             <section id="project">
+                <div class="project container">
+                   <div class="project-header"> 
+                      <h1 class="section-title">les résumes</h1>
+                     </div>
+                        <div class="all-project"> 
+                           <div class="project-item">
+                               <div class="project-info"> 
+                                  <h1> Chapitre 1 :<span>Intoduction</span> </h1>
+                                      <h2>  <ul type="circle">
+                                      <br> <li>Ben Hadj djilali magraouan Meriem</li>
+                                       <li>Amellal Nour el houda</li>
+                                         </h2></ul>
+                                      
+                                         <span>1 / Les techniques de l'information et de la communication (TIC) : </span>
+                                          <p>Les techniques de l'information et de la communication (TIC) regroupent les outils utilisés pour manipuler, traiter, produire, transmettre et échanger des informations.  .  Les TIC permettent la communication, l'accès aux sources d'informations  le stokage la manipulation et la production d'informations sous forme de texte, image, son et vidéo. Elles font appel à des techniques telles que l'informatique, Internet, l'audiovisuel, le multimédia et les télécommunications. </p>
+                                        <span>2/Les TIC sont regroupées en trois grandes catégories : </span>
+                                         <p>la téléinformatique, les télécommunications et l'électronique grand public.</p>
+                                          <span>La téléinformatique :</span>
+                                           <p>concerne l'échange d'informations numériques entre systèmes informatiques, incluant Internet, les serveurs, les réseaux, etc. </p>
+                                          <span>Les télécommunications</span>
+                                          <p>englobent les systèmes communicants qui ne sont pas nécessairement informatiques, tels que le traitement du signal, la transmission analogique, la téléphonie mobile, etc. </p>
+                                           <span>L'électronique</span>
+                                             <p>grand public concerne les composants et équipements électroniques utilisés par le grand public, tels que les télévisions, les lecteurs DVD, etc.</p>
+                                               <span>Les objectifs recherchés dans le domaine des TIC sont les suivants :</span>
+                                                 <p>La connectivité : permettre la communication entre différents types d'ordinateurs utilisant des logiciels différents.
+                                                    La modularité : utiliser un ensemble restreint d'appareils généraux qui peuvent être adaptés à différentes configurations.
+                                                    Une implantation simple : proposer des solutions général.</p>
+                                                 <span> 3/Les composants des TIC se divisent en deux parties </span>
+                                                 <br>
+                                                 <span>La partie matérielle</span>
+                                                 <p> comprend les dispositifs physiques utilisés dans les TIC, tels que :
+
+                                                    Les ordinateurs portables, les télévisions, les téléphones portables, les tablettes interactives, les appareils photo numériques, les robots, etc.
+                                                    Les stations de travail, qui sont des machines capables d'envoyer des données vers les réseaux, tels que les ordinateurs personnels (PC), les ordinateurs Apple (MAC), les terminaux SUN (Terminal X), les serveurs, etc.</p>
+                                                  <span>La partie logicielle </span>
+                                                 <p>englobe les logiciels utilisés dans les TIC, notamment :
+
+                                                    Les systèmes d'exploitation, tels que Windows, macOS, Linux, etc., qui gèrent les ressources matérielles et permettent l'exécution des applications,
+                                                    les logiciels d'application,  de retouche d'image et de  montage vidéo, etc.</p>
+                                                  <span>4/ Les TIC présentent plusieurs caractéristiques qui les rendent bénéfiques pour les entreprises :</span>
+                                                   <p> * Rapidité</p>
+                                            
+                                                   <p> * Décentralisation du pouvoir,</p>
+                                        
+                                                  <p> * Meilleur accès aux informations,</p>
+                                                  
+                                                 <p> * Rationalité .</p>
+                                                
+                                                </p>
+                                                <span>5/ La communication joue un rôle essentiel dans les organisations et peut être décomposée en plusieurs éléments clés :</span>
+                                                <p> <span>Objectifs de communication : </span> Les objectifs de communication sont les réactions attendues du destinataire. Ils sont définis selon trois dimensions :
+
+                                                    <span>Au niveau cognitif :</span> créer une prise de conscience, attirer l'attention, informer sur une marque, un produit, une idée ou une entreprise.
+                                                    <span>Au niveau affectif :</span>  modifier ou renforcer l'image du produit en influençant les attitudes et opinions.
+                                                     <span>Au niveau comportemental :</span> modifier les comportements en incitant à l'achat ou à l'essai.
+                                                      <span>Partenaires de communication :</span> 
+                                                    
+                                                    <span>Émetteur :</span> celui qui transforme le message en signaux.
+                                                    <span>Récepteur : </span>  celui qui reçoit les signaux et reconstruit le message.
+                                                     <span>Vecteurs de communication :</span>
+
+                                                   <span>Message :</span> l'émetteur crée un message qu'il tente de coder de manière précise.
+                                                     <span>Médias :</span> les moyens utilisés pour transmettre le message.
+                                                    <span>Fonctions de communication :</span> 
+                                                    
+                                                     <span>Codage :</span>traduction du message en un ensemble str.
+                                                    </p>
+                                            
+                                            
+                                            
+                                            
+                                            </div>
+                             </div>  
+
+                              <!-- chapitre 2 -->
+                             <div class="project-item">
+                                    <div class="project-info"> 
+                                      <h1> Chapitre 2 :<span>Les résraux informatique</span> </h1>
+                                       <h2>  <ul type="circle">
+                                       <br> <li>Baaziz Hibatou Allah</li>
+                                        <li>Bazine Aicha</li>
+                                          </ul></h2>
+                                              <span>1. L’histoire de l’internat :</span>
+                                                  <p>L’internet est très important dans notre vie
+                                                    quotidienne il a été inventé le 1 Janvier 1983, puis s&#39;est répandu
+                                                    dans le monde entier pour devenir accessible à tous vers 1990.
+                                                    L&#39;internet est un ensemble de réseaux mondiaux interconnectés
+                                                    qui permet á des ordinateurs et à des serveurs de communiquer
+                                                    efficacement au moyen d&#39;un protocole de communication comme
+                                                    elle est important dans notre vie elle a bcp des avantages</p>
+                                                <span>2. Un réseau informatique :</span>
+                                                  <p>est composé d&#39;ordinateurs et de
+                                                    terminaux connectés entre eux, permettant l&#39;échange
+                                                    d&#39;informations numériques selon des règles définies. La mise en
+                                                    réseau consiste à relier des ordinateurs pour qu&#39;ils partagent des
+                                                    ressources. Les réseaux reposent sur l&#39;interconnexion, assurant la
+                                                    transmission des données d&#39;un nœud à un autre, et la
+                                                    communication, permettant l&#39;échange de données entre processus.</p>
+                                                <span>3. Les caractéristiques d&#39;un réseau</span>
+                                                 <p>incluent sa topologie physique et
+                                                    logique, le débit (bits/s), la distance maximale et le nombre
+                                                    maximum de nœuds interconnectés.</p>
+                                                     <span>4. Quelques termes importants en réseau :</span>
+                                                      <p>sont la station de travail,
+                                                        le nœud, le serveur et le paquet. Les réseaux peuvent être
+                                                        homogènes (même constructeur) ou hétérogènes (divers
+                                                        constructeurs).</p>
+                                                        <span>5. Les éléments d&#39;un réseau :</span>
+                                                      <p>comprennent les ordinateurs équipés
+                                                        de cartes de communication, les logiciels et les supports de
+                                                        connexion.</p>
+                                                        <span>6. Classification des réseaux :</span>
+                                                        <p>Les réseaux peuvent être classés
+                                                            selon leur portée (LAN, MAN, WAN) et leur utilisation (intranet,
+                                                            extranet, Internet). Les supports de connexion peuvent être filaires
+                                                            (coaxial, paires torsadées, fibre optique) ou sans fil (ondes radios,
+                                                            infrarouges, satellites, Bluetooth). Les réseaux peuvent également
+                                                            être de type peer-to-peer ou client-serveur.</p>
+                                                         <span>7. La topologie d&#39;un réseau :</span>
+                                                           <p>peut-être en bus, en étoile, en anneau
+                                                            ou maillée. Chacune a ses propres caractéristiques et méthodes
+                                                            de transmission des données.</p>
+                                                            <span>En résumé :</span>
+                                                            <p>un réseau informatique est un ensemble d&#39;ordinateurs
+                                                                interconnectés pour permettre la communication et l&#39;échange de
+                                                                données, avec diverses configurations et technologies adaptées à
+                                                                différents besoins</p>
+                                                        </div>
+                                </div>
+ 
+
+                            <!-- chapitre 3 -->
+
+                                <div class="project-item">
+                                    <div class="project-info"> 
+                                      <h1> Chapitre 3 :<span>Le modèle OSI</span> </h1>
+                                       <h2>  <ul type="circle">
+                                       <br> <li>Mammeri Nour Djihane</li>
+                                        <li>Refsi Meriem</li>
+                                          </ul></h2>
+                                             
+                                         <span>Les composants matériels d'un réseau informatique comprennent les cartes réseau et les switches.</span>
+                                           <p>Les cartes réseau, également connues sous le nom de cartes d'interface réseau (NIC), sont des composants installés à l'intérieur d'un ordinateur qui lui permettent de se connecter à un réseau, qu'il s'agisse d'Internet ou d'un réseau local. Elles sont généralement connectées à une prise Ethernet ou Wi-Fi. Les cartes réseau jouent un rôle crucial dans la communication entre les ordinateurs d'un réseau. Elles permettent à un ordinateur de transmettre et de recevoir des données en utilisant des protocoles de communication spécifiques tels que TCP/IP, qui sont utilisés pour transférer des données sur Internet.</p>
+                                             <span>Les switches</span>
+                                                <p>également appelés commutateurs réseau, sont des composants matériels utilisés pour connecter des appareils sur un réseau local (LAN). Les switches permettent à plusieurs appareils, tels que des ordinateurs, des imprimantes et des serveurs, de communiquer entre eux en utilisant des adresses MAC (Media Access Control). Lorsqu'un appareil se connecte à un switch, celui-ci vérifie son adresse MAC et stocke cette information dans une table de correspondance. Lorsqu'un autre appareil du réseau souhaite communiquer avec cet appareil, le switch utilise cette table pour envoyer les données uniquement à l'appareil destinataire, plutôt que de les diffuser à tous les appareils du réseau.</p>
+                                                      <p>Les switches sont disponibles en différentes tailles, allant des petits switches pour les réseaux domestiques et les petits bureaux, aux switches de niveau entreprise pour les réseaux plus importants. Ils peuvent offrir des fonctionnalités avancées telles que la gestion des VLAN, la qualité de service (QoS), la gestion du trafic, etc.</p>
+                                                        <p>Ces deux composants sont essentiels pour la mise en place d'un réseau informatique fonctionnel, permettant la communication et le partage de données entre les différents appareils connectés.</p>
+                                                        <span>Un hub</span>
+                                                    <p>est un composant matériel utilisé pour connecter plusieurs appareils sur un réseau local (LAN). Il fonctionne comme un répéteur en recevant les données envoyées par un appareil et les transmettant à tous les autres appareils connectés. Contrairement à un switch, le hub ne possède pas la fonctionnalité de table de correspondance, ce qui signifie que toutes les données envoyées sur le réseau sont reçues par tous les appareils connectés, même si l'appareil destinataire est différent. Les hubs ont été largement remplacés par les switches, qui offrent une gestion du trafic plus efficace, une communication plus rapide et plus sécurisée entre les appareils connectés. Cependant, les hubs peuvent encore être utilisés dans des cas spécifiques ou dans de petits réseaux où la complexité d'un switch n'est pas nécessaire.
+                                                        Le modèle OSI (Open Systems Interconnection) est un modèle de référence pour les communications réseau. Il divise les communications en sept couches distinctes, chacune étant responsable de fonctions spécifiques liées à la communication de données entre les appareils du réseau. Le modèle OSI est souvent utilisé pour la conception et la mise en œuvre de réseaux informatiques.</p>
+                                                         <span>Les sept couches du modèle OSI sont :</span>
+                                                        <p><span>1.	La couche physique :</span> responsable de la transmission des données sur le support physique.</p>
+                                                        <p><span>2.	La couche liaison de données :</span> responsable de la transmission des données entre les appareils partageant le même support physique.</p>
+                                                         <p><span>3. La couche réseau :</span> responsable du routage des données à travers le réseau.</p>
+                                                          <p><span>4. La couche transport :</span> responsable de l'acheminement des données de bout en bout entre les appareils.</p>
+                                                         <span>5.Le Modèle TCP/IP</span>
+                                                         <p>Le modèle TCP/IP (Transmission Control Protocol/Internet Protocol) est un modèle de référence largement utilisé dans les communications réseau. Contrairement au modèle OSI, qui comprend sept couches, le modèle TCP/IP se compose de quatre couches principales :</p>
+                                                           <p> <span>1.	La couche liaison de données :</span> Cette couche est responsable de la transmission des données sur le support physique, tel que le câble, la fibre optique ou les ondes radio. Elle gère les protocoles qui définissent la structure des trames et assure la fiabilité de la transmission.</p>
+                                                             <p> <span>2. La couche réseau :</span> Cette couche est chargée du routage des données à travers le réseau. Elle utilise des adresses IP pour déterminer la meilleure route à emprunter afin de livrer les paquets de données à leur destination.</p>
+                                                                 <p><span>3. La couche transport : </span>Cette couche est responsable de l'acheminement des données de bout en bout entre les appareils. Elle garantit la fiabilité et le contrôle de flux des données en utilisant les protocoles TCP (Transmission Control Protocol) et UDP (User Datagram Protocol).</p>
+                                                               <p><span>4. La couche application :</span> Cette couche permet aux applications de communiquer entre elles via le réseau. Elle inclut des protocoles tels que HTTP (Hypertext Transfer Protocol), FTP (File Transfer Protocol), SMTP (Simple Mail Transfer Protocol) et DNS (Domain Name System).
+                                                                Le modèle TCP/IP est largement utilisé dans l'architecture d'Internet et sert de base pour les protocoles et les communications sur le Web. Il facilite l'interconnexion des réseaux et la transmission efficace des données à travers différentes technologies et plates-formes.
+                                                                Veuillez noter que ces résumés sont basés sur les informations que vous avez fournies, et ils peuvent être étendus ou adaptés en fonction de vos besoins spécifiques.</p>
+                                                             <p> <span>6. La couche réseau :</span> cette couche est responsable du routage des données à travers le réseau. •</p>
+                                                              <p><span>7. La couche transport : </span> cette couche est responsable de l'acheminement des données de bout en bout entre les appareils. • La couche application : cette couche est responsable de la communication entre les applications sur les appareils de réseau. Le modèle TCP/IP est le modèle de référence pour les protocoles de communication de réseau les plus largement utilisés, tels que le protocole Internet (IP), le protocole de contrôle de transmission (TCP) et le protocole de datagramme utilisateur (UDP). Il est utilisé pour la conception et la mise en œuvre des réseaux d'entreprise, des réseaux Internet et des réseaux sans fil. Modèle TCP/IP Modèle OSI Couche Application Couche Application Couche Présentation Couche Session Couche Transport (TCP) Couche Transport Couche Internet (IP) Couche Réseau Couche Accès réseau Couche liaison données Couche Physique 4) L’adressage Les communications dans un réseau obéissent à des règles : • Adressage qui permet d'identifier de manière unique les deux unités en communication • Architecture qui définit les rôles endossés par les deux unités • Protocoles qui assurent l'échange des données C’est quoi un adressage IP : Une adresse IP (Internet Protocol) est le numéro qui identifie chaque ordinateur dans les réseaux qu’il appartient. Il y’a deux mode d’adressage IPV4 et IPV6 : 1. ADRESSE IPV4: a. Chaque paquet contient : adresse source sur (32 bits) et une adresse destinataire sur (32bits)</p>
+                                                             <p>L'adresse IPv4 est un numéro unique attribué à chaque appareil sur un réseau qui utilise le protocole Internet. Une adresse IPv4 est composée de 32 bits, ce qui équivaut à 4 octets. Chaque octet est généralement représenté en décimal et séparé par un point, formant ainsi une adresse IPv4 sous la forme xxx.xxx.xxx.xxx. Par exemple, l'adresse IPv4 172.16.4.20 est représentée en binaire comme 10101100 00010000 00000100 00010100, et en décimale comme 172.16.4.20.</p>
+                                                            <p>Dans une adresse IPv4, les 32 bits sont divisés en deux parties : la partie réseau et la partie hôte. La partie réseau identifie le réseau auquel l'appareil est connecté, tandis que la partie hôte identifie l'appareil spécifique sur ce réseau.</p>
+                                                             <p>Il existe différents types d'adresses IPv4, tels que l'adresse réseau et l'adresse de diffusion. L'adresse réseau est caractérisée par tous les bits de la partie hôte étant égaux à zéro. Par exemple, pour l'adresse réseau 10.0.0.0, tous les hôtes de ce réseau auront la même partie réseau. L'adresse de diffusion, quant à elle, est caractérisée par tous les bits de la partie hôte étant égaux à un. Par exemple, pour le réseau 10.0.0.0, l'adresse de diffusion serait 10.255.255.255. L'adresse de diffusion permet à un appareil d'envoyer des paquets à tous les hôtes du réseau simultanément, sans avoir à les adresser individuellement.</p>
+                                                             <p>Il convient de noter que l'espace d'adressage IPv4 est limité en raison du nombre fini de combinaisons possibles avec 32 bits. En raison de cette limitation, le protocole IPv6 a été développé pour fournir un espace d'adressage plus vaste avec ses 128 bits, permettant ainsi de répondre aux besoins croissants de connectivité à l'ère de l'Internet des objets et de l'expansion d'Internet.</p>
+                                                              <p>Dans un réseau IPv4, l'adresse hôte fait référence à la partie de l'adresse IP qui identifie une machine spécifique sur le réseau. L'attribution des valeurs de l'adresse hôte se situe entre l'adresse réseau et l'adresse de diffusion.</p>
+                                                             <p>Prenons l'exemple d'un réseau avec l'adresse réseau 10.0.0.0 et l'adresse de diffusion 10.255.255.255. Les adresses des machines (hôtes) sur ce réseau vont de :
+                                                                •	10.0.0.1 : première adresse hôte (machine)
+                                                                •	...
+                                                                •	10.255.255.254 : dernière adresse hôte (machine)
+                                                                La plage d'adresses entre l'adresse réseau et l'adresse de diffusion est réservée aux machines individuelles connectées à ce réseau. Chaque machine se voit attribuer une adresse hôte unique pour identifier de manière unique son emplacement sur le réseau.
+                                                                Le masque de réseau est utilisé pour déterminer quelle partie de l'adresse IP correspond à la partie réseau et quelle partie correspond à la partie hôte. Dans l'exemple donné, le masque de réseau est 255.0.0.0, ce qui signifie que les 8 premiers bits de l'adresse IP sont réservés à la partie réseau et les 24 derniers bits sont réservés à la partie hôte.
+                                                                L'adresse réseau (10.0.0.0) identifie le réseau dans son ensemble, tandis que l'adresse de diffusion (10.255.255.255) est utilisée pour envoyer des paquets à tous les hôtes du réseau simultanément.
+                                                                En utilisant le masque de réseau, il est possible de définir des sous-réseaux, ce qui permet de diviser un réseau en sous-groupes logiques plus petits. Chaque sous-réseau aurait alors son propre réseau, adresse de diffusion, plage d'adresses d'hôtes et masque de sous-réseau correspondants.
+                                                                </p>
+                                                            </div>
+                                </div>
+              <!-- le 4 chapitre -->
+
+
+              <div class="project-item">
+                  <div class="project-info"> 
+                     <h1> Chapitre 4 :<span>L'internet et le Web</span> </h1>
+                      <h2>  <ul type="circle">
+                     <br> <li>Kadik Ikram</li>
+                       <li>Zellagui Safa</li>
+                      </ul></h2>
+                         <span>1-introduction :</span>
+                        <p> <span>Le Web et Internet c’est pareil :</span>
+                            Le Web et Internet sont étroitement liés. Le World Wide Web (WWW) est un système hypertexte
+                            public qui fonctionne sur Internet. Il permet de consulter des pages accessibles sur des sites en
+                            utilisant un navigateur. Les pages web sont reliées les unes aux autres par des hyperliens, d&#39;où
+                            l&#39;analogie de la toile d&#39;araignée. Le Web est une application d&#39;Internet, qui est un support de
+                            communication général.</p>
+                          <p><span>Le principe du World Wide Web :</span>
+                            Le principe du World Wide Web consiste à accéder à des documents textuels situés sur des machines
+                            accessibles via Internet et liés entre eux par des liens hypertexte. Actuellement, le Web sert à fournir
+                            des ressources de différentes natures, telles que du texte, des images, du son, de la vidéo, du
+                            contenu applicatif interactif comme les achats en ligne ou les discussions.</p>
+                             <p>Une URL (Uniform Resource Locator) est un lien hypertexte qui permet de suivre une adresse
+                                spécifique et d&#39;ouvrir une nouvelle page. Elle décrit l&#39;emplacement d&#39;une ressource en fournissant
+                                l&#39;adresse du serveur et l&#39;adresse de la page sur le serveur.</p>
+                             <span>2-Les aspects techniques du Web :</span>
+                              <p><span>1. Les URL :</span>
+                                permettent d&#39;accéder à un ensemble de ressources en utilisant le protocole DNS pour la
+                                localisation.</p>
+                        <p><span>2. http</span>
+                            est un protocole de niveau applicatif utilisé dans le paradigme client-serveur.</p>
+                           <p><span>3. HTML</span>
+                            est un langage de description de pages web qui permet d&#39;intégrer du texte, des images et
+                            d&#39;autres objets..</p>
+                          <span>3-page web et site web :</span>
+                          <p>Une page web est un document multimédia composé d&#39;images, de textes et offrant la possibilité
+                            d&#39;interactions et de liens. Elle est décrite élément par élément, tels que le titre, les morceaux de
+                            texte et les images, à l&#39;aide d&#39;un langage de description comme HTML, XHTML ou HTML5.</p>
+                         <span>4- La création d&#39;une page web HTML :</span>
+                           <p>La création d&#39;une page web HTML implique l&#39;utilisation du langage de description HTML, qui est un
+                            fichier texte structuré par des balises. Un fichier HTML doit contenir au minimum les balises &lt;html&gt;,
+                            &lt;head&gt;, &lt;title&gt; et &lt;body&gt;.
+                            
+                            . Le texte présente des exemples de balises HTML pour structurer un document, ainsi que les
+                            éléments de base qui doivent être inclus dans tout fichier HTML, tels que la balise &lt;html&gt;, &lt;head&gt;,
+                            &lt;title&gt; et &lt;body&gt;. Le texte montre également comment créer un titre et un paragraphe en HTML.</p>
+                  
+                        </div>
+             </div>
+
+
+
+
+
+                  <!-- chapitre 5  -->
+             <div class="project-item">
+                <div class="project-info"> 
+                   <h1> Chapitre 5 :<span>Système de Gestion de version</span> </h1>
+                    <h2>  <ul type="circle">
+                   <br> <li>Allouche Aicha</li>
+                     <li>Benkhaled Sabrina</li>
+                    </ul></h2>
+                         <span>1.Qu’est-ce que Git ? </span>
+                       <p>Les logiciels de gestion de versions sont quasiment incontournables aujourd`hui car ils facilitent grandement la gestion de projets et car ils permettent de travailler en équipe de manière beaucoup plus efficace. </p>
+                        <p>Parmi les logiciels de gestion de versions, Git est le leader incontesté et il est donc indispensable pour tout développeur de savoir utiliser Git </p>
+                        <span>2. A quoi sert concrètement un système de gestion de version ? </span>
+                         <p>L`organisation du travail est ici beaucoup plus complexe puisqu`il va falloir s`assurer : • Que les fonctionnalités sur lesquelles travaillent un développeur ne rentrent pas en conflit avec les fonctionnalités sur lesquelles travaillent des autres développeurs ; • Que chaque développeur sache sur quoi travaillent les autres développeurs afin de travailler correctement ;• que chaque développeur possède une version actualisée du site pour tester et implémenter ses fonctionnalités. </p>
+                          <p>Ici, l`idée la plus logique serait de mettre en place un serveur distant qui contiendrait l`historique des modifications faites par chaque développeur afin que chacun ait accès aux avancées des autres. </p>
+                            <p>Grosso-modo, les logiciels de versioning et Git en particulier vont nous permettre d`effectuer ces opérations mais de manière beaucoup plus robuste et avec de nombreuses fonctionnalités supplémentaires très utiles (possibilité de synchroniser son dossier local avec le serveur, connexion aux autres projets et mise à jour des différences automatisée, etc.</p>
+                           <p>Git permet de coordonner le travail entre plusieurs personnes en conservant un historique des changements effectués sur des fichiers. 
+
+                            Les développeurs travaillant avec Git. </p>
+                         
+                   <span>3.Les deux modèles des logiciels de gestion de version :  </span>
+                    <p>Modèle centralisé vs modèle décentralisé </p>
+                    <p>Le modèle distribué a été popularisé par Git et présente différents avantages notables par rapport au modèle centralisé : • Simplicité / flexibilité du travail : Comme chaque utilisateur peut héberger le code du projet, on n`a plus besoin d`être constamment connecté à un serveur central et on peut donc travailler en ligne sur sa propre machine ;• Sécurité : Comme chaque utilisateur possède le code complet d`un projet, on peut utiliser la copie du projet d`un utilisateur comme back- up en cas de corruption du serveur central </p>
+                    <span>4. Qu’est-ce que GitHub ? </span>
+                         <p>Git est un logiciel de gestion de version. 
+
+                            GitHub est un service en ligne qui permet d`héberger des dépôts ou repo Git. </p>
+                         <span>5. Utiliser Git</span>
+                                 <p>igne de commande, console et interface Graphique. 
+
+                                    Dans ce cours, nous allons utiliser la console et donc un langage en lignes de commande plutôt qu`une interface graphique. 
+                                    
+                                    Nous faisons ce choix pour différentes raisons : • Utiliser la ligne de commande est le seul moyen d`avoir accès à toutes les commandes Git ; • Toutes les personnes vont avoir accès aux mêmes commandes avec la ligne de commande, ce qui signifie que tout le monde pourra suivre ce cours de la même façon • Si vous savez comment utiliser la version en ligne de commande, vous saurez utiliser n`importe quelle autre interface graphique. </p>
+                                 <p>En Windows, pour ouvrir la ligne de commande : 1. </p>
+                                 <span>6. Installation de Git : </span>
+                                  <p>La façon la plus simple d’installer Git est de télécharger la dernière version sur le site  
+
+                                    Officiel http://git-scm.com/downloads , d’ouvrir le fichier téléchargé et de suivre les  
+                                    
+                                    Instructions à l’écran en laissant toutes les valeurs par défaut. </p>
+                      
+                                 <span>7.Paramétrage de Git : </span>
+                                      <p>Nous allons notamment ici renseigner un nom d`utilisateur et une adresse mail que Git devra utiliser ensuite. </p>
+                                      <p>Pour faire cela, nous allons utiliser notre première commande Git qui est la commande git config. 
+
+                                        Nous allons également passer une option –global à notre commande. </p>
+                                      <p>Ici, l`option –global va nous permettre d`indiquer à Git que le nom d`utilisateur et l`adresse mail renseignés doivent être utilisés globalement (c`est-à-dire pour tout projet Git). </p>
+                                      <p>On va donc taper les commandes suivantes : git config –global user. 
+
+                                        Com à la suite pour renseigner un nom et une adresse email. 
+                                        
+                                        Pour vous assurer que vos informations ont bien été enregistrées, vous pouvez taper git config user.</p>
+                      
+                                      <span> 8. Démarrer un dépôt Git : </span>
+                                     <p>Un “dépôt” correspond à la copie et à l`importation de l`ensemble des fichiers d`un projet dans Git. 
+
+                                        Nous allons voir comment faire cela dans la suite de ce cours. </p>
+                                         
+                                         <span>9. La gestion des informations selon Git : </span>
+                                         Git pense les données à la manière d`un flux d`instantanés ou “snapshots”. à chaque fois qu`on va valider ou enregistrer l`état d`un projet dans Git, il va prendre un instantané du contenu de l`espace de travail à ce moment et va enregistrer une référence à cet instantané pour qu`on puisse y accéder par la suite. 
+
+                                           <p>Git pense les données à la manière d`un flux d`instantanés ou “snapshots”. à chaque fois qu`on va valider ou enregistrer l`état d`un projet dans Git, il va prendre un instantané du contenu de l`espace de travail à ce moment et va enregistrer une référence à cet instantané pour qu`on puisse y accéder par la suite. 
+
+                                            Le fait que l`on dispose de l`historique complet d`un projet localement fait que la grande majorité des opérations de Git peuvent être réalisées localement, c`est-à-dire sans avoir à être connecté à un serveur central distant. </p>
+                      
+                                          <span>10. Les états des fichiers : </span>
+                                           <p>Un fichier possède l`état “suivi” s`il appartenait au dernier instantané capturé par Git, c`est-à-dire si il est enregistré en base. 
+
+                                            Lorsqu`on démarre un dépôt Git en important un répertoire déjà existant depuis notre machine, les fichiers sont au départ tous non suivis. 
+                                            
+                                            Lorsqu`on clone un dépôt Git déjà existant, c`est différent puisqu`on copie tout l`historique du projet et donc les fichiers sont tous déjà suivis par défaut. 
+                                            
+                                            Ensuite, chaque fichier suivi peut avoir l`un de ces trois états : • Modifié (“modified”) ; • Indexé (“staged”) ; • Validé (“committed”). 
+                                            
+                                            Lors du clonage d`un dépôt déjà existant, les fichiers sont enregistrés par défaut en base et ils sont donc validés par défaut. 
+                                            
+                                            Les fichiers modifiés vont être considérés comme “modifiés” par Git tandis que les nouveaux fichiers vont être “non suivis”. 
+                                            
+                                            Un fichier modifié est considéré comme “modifié” par Git tant qu`il n`a pas été indexé</p>
+                                          <span>11.Les zones de travail : </span>
+                                            <p>Les états de fichiers sont liés à des zones de travail dans Git. 
+
+                                                En fonction de son état, un fichier va pouvoir apparaitre dans telle ou telle zone de travail. 
+                                                
+                                                Tout projet Git est composé de trois sections : le répertoire de travail (working tree), la zone d`index (staging area) et le répertoire Git (repository). 
+                                                
+                                                La zone d`index ou “staging area” correspond à un simple fichier, généralement situé dans le répertoire Git, qui stocke les informations concernant ce qui fera partie du prochain instantané ou du prochain “commit”. 
+                                                
+                                                Le répertoire Git est l`endroit où Git stocke les méta-données et la base de données des objets de votre projet. 
+                                                
+                                                E que son nom est ajouté à la zone d`index, il possède l`état indexé. 
+                                                
+                                                Finalement, on va valider (“commit”) la version indexée de nos fichiers pour les ajouter au répertoire Git. </p>
+                              
+                                                <span>12.Créer un dépôt Git à partir d’un répertoire existant : </span>
+                              
+                                                <p>Dans ce cas là, nous allons pouvoir importer l`ensemble des ressources d`un projet dans Git. 
+
+                                                    Pour la suite de cette leçon, je vais créer un répertoire “projet-git” qui se trouve sur mon bureau et qui contient deux fichiers texte vides “fichier1. 
+                                                    
+                                                    Git qui contient un ensemble de fichiers qui vont permettre à un dépôt Git de fonctionner Lorsqu`on utilise git init, Git nous renvoie un message en nous informant que le dépôt Git a bien été initialisé et qu`il est vide. 
+                                                    
+                                                    C`est tout à fait normal puisque nous n`avons encore versionné aucun fichier (nous n`avons ajouté aucun fichier du répertoire en base). 
+                                                    
+                                                    On peut utiliser ici la commande git status pour déterminer l`état des fichiers de notre répertoire. 
+                                                    
+                                                    Cette commande est extrêmement utile et c`est une de celles que j`utilise le plus personnellement : Ici, git status nous informe que notre projet possède deux fichiers qui ne sont pas sous suivi de version (“untracked”) et qui sont les fichiers “README. 
+                                                    
+                                                    Il nous dit aussi qu`aucun fichier n`a été validé (“commit”) en base pour le moment ni ajouté pour validation. 
+                                                    
+                                                    La commande git statuts nous informe également sur la branche sur laquelle on se trouve (“master” ici). 
+                                                    
+                                                    L`étape suivante va donc ici être d`indexer nos fichiers afin qu`ils puissent ensuite être validés, c`est-à-dire ajoutés en base et qu`on puisse ainsi avoir un premier historique de version. 
+                                                    
+                                                    Pour indexer des fichiers, on utilise la commande git add. 
+                                                    
+                                                    Vont posséder une signification spéciale et nous permettre de créer des schémas de correspondances. 
+                                                    
+                                                    Txt, je demande finalement à Git d`ajouter à l`index tous les fichiers du projet qui possèdent une extension . 
+                                                    
+                                                    Txt, quel que soit leur nomgit status nous dit qu`on a maintenant deux nouveaux fichiers ajoutés à l`index. 
+                                                    
+                                                    La commande git add permet en fait de faire plusieurs choses : elle permet d`indexer des fichiers déjà sous suivi de version et de placer sous suivi des fichiers non suivi (en plus de les indexer). 
+                                                    
+                                                    Ici, on est certains que nos deux nouveaux fichiers ont bien été ajoutés à l`index puisqu`ils apparaissent dans la section “changes to be committed” (“modifications à valider”). 
+                                                    
+                                                    Pour valider ces fichiers et les ajouter en base, on va maintenant utiliser la commande git commit. 
+                                                    
+                                                    Lorsqu`on utilise git commit sans argument, une nouvelle fenêtre s`ouvre en utilisant l`éditeur par défaut qui est dans la majorité des cas VIM. 
+                                                    
+                                                    Ici, on nous demande d`ajouter un message avec notre commit. 
+                                                    
+                                                    Si on effectue à nouveau un git status, voici le message renvoyé : Git nous informe désormais qu`il n`y a plus aucun fichier à vider, ce qui signifie que tous les fichiers sont sous suivi de version et sont enregistrés en base et qu`aucune modification n`a été apportée à ces fichiers depuis le dernier commit. </p>
+                                                   <span>13. Cloner un dépôt Git : </span>
+                                                       <p>Créez un repo sur GitHub Maintenant, vous avez créer votre repo sur GitHub. 
+
+                                                        Nous pouvons maintenant transmettre nos fichiers à ce repo. 
+                                                        
+                                                        Git branch -M main git remote add origin https://github. </p>
+                                                       <span>14.Ajouter ou modifier des fichiers dans un projet et Actualiser notre dépôt Git : </span>
+                                       
+                                                                <p>A ce niveau, nous avons donc d`un côté notre projet contenant un ensemble de fichiers et de ressources sur lesquelles on travaille ainsi qu`un dépôt Git qui sert à gérer les différentes versions de notre projet. 
+
+                                                                    On va indiquer tous ces changements à Git pour qu`il conserve un historique des versions auquel on pourra ensuite accéder pour revenir à un état précédent du projet (dans le cas où une modification entraine un bogue par exemple ou n`amène pas le résultat souhaité). 
+                                                                    
+                                                                    A chaque fois qu`on souhaite enregistrer une modification de fichier ou un ajout de fichier dans le dépôt Git, on va devoir utiliser les commandes git add et git commit comme on a pu le faire dans la leçon précédent . </p>
+                                                                      <span>15.Consulter l’historique des modifications Git : </span>
+                                                                   <p>La manière la plus simple de consulter l`historique des modifications Git est d`utiliser la commande git log. </p>
+                                                                    <span>16.Annuler des modifications apportées à un fichier : </span>
+                                                                     <p>Après un commit, on va continuer à travailler sur nos fichiers et à les modifier. 
+
+                                                                        On va pouvoir faire cela avec la commande générale git checkout – nom-du-fichier ou la nouvelle commande spécialisée git restore. </p>
+                                       
+                                                  
+                                                              <span>17.Qu’est ce qu’une branche ? </span>
+                                                                     <p>Git a une approche totalement différente des branches tant que  
+
+                                                                        Une branche, dans Git, est simplement un pointeur vers un commit . 
+                                                                        
+                                                                        Le pointeur est un objet qui contient l`adresse d`une donnée stockée quelque part. 
+                                                                        
+                                                                        Un commit est un objet qui contient un pointeur vers l`instantané du contenu indexé ainsi que des pointeurs vers le ou les commits le précédant directement. 
+                                                                        
+                                                                         </p>
+                                                   
+                                                   
+                                                            </div>
+                </div>
+                        </div>
+                </div>      
+  </section>                    
+                   <!-- about us -->
+ <section id="about-us">
+    <div class="about-us container">
+           
+              <h1 class="section-title"> About Us </h1>
+              <table class="table">
+                <tr>
+                   <th>le nom</th>
+                  <th>le prenom</th>
+                  <th>matricule</th>
+                  <th>groupe</th>
+                  <th>la partie</th>
+                </tr>
+                   <tr>
+                   <td> Amellal </td>
+                  <td>Nour El Houda</td>
+                  <td>222231347713</td>
+                  <td>04</td>
+                   <td colspan="2" rowspan="2">01</td>
+                   </tr>
+                   <tr>
+                      <td>Ben Hadj Djilali magraouan</td>
+                      <td>Meriem</td>
+                      <td>222231555706</td>
+                      <td>04</td>
+                       
+                   </tr>
+                   <tr>
+                      <td>Bazine</td>
+                      <td>Aicha</td>
+                      <td>222231354007</td>
+                      <td>04</td>
+                       <td colspan="2" rowspan="2">02</td>
+                   </tr>
+                   <tr>
+                      <td>Baaziz</td>
+                      <td>Hibatou Allah </td>
+                      <td>222231383002</td>
+                      <td>04</td>
+                       
+                   </tr>
+                   <tr>
+                      <td>Refsi</td>
+                      <td>Meriem</td>
+                      <td>222231332501</td>
+                      <td>04</td>
+                       <td colspan="2" rowspan="2">03</td>
+                   </tr>
+                   <tr>
+                      <td>Memmeri</td>
+                      <td>  Nour Djihane</td>
+                      <td>222231704718</td>
+                      <td>04</td>
+                      
+                   </tr>
+                   <tr>
+                      <td>Kadik</td>
+                      <td>Ikram</td>
+                      <td>222231567912</td>
+                      <td>04</td>
+                       <td colspan="2" rowspan="2">04</td>
+                   </tr>
+                   <tr>
+                      <td>Zellagui</td>
+                      <td>Safa</td>
+                      <td>222231469811</td>
+                      <td>04</td>
+                      
+                   </tr>
+                   <tr>
+                      <td>Allouche</td>
+                      <td>Aicha</td>
+                      <td>222231331411</td>
+                      <td>02</td>
+                       <td colspan="2" rowspan="2">05</td>
+                   </tr>
+                   <tr>
+                      <td>Benkhaled </td>
+                      <td>Sabrina</td>
+                      <td>222231595912</td>
+                      <td>04</td>
+                       
+                    </tr>
+              </table>
+
+         </div>
+     
+
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </section>     
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+</body>
+</html> 
